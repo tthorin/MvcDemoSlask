@@ -31,7 +31,7 @@ public class HomeController : Controller
     public IActionResult Name(string name)
     {
         ViewData["Hello"]="Hello "+name +", how are you today?";
-        var cnnstr = Environment.GetEnvironmentVariable("mongoCnn");
+        var cnnstr = Environment.GetEnvironmentVariable("CUSTOMCONNSTR_mongoCnn");
         ViewData["Cnn"] = cnnstr;
         return View("Index");
     }
